@@ -3,7 +3,7 @@ Repository for different one-file scripts (Phylogenetics, Bioinformatics, Name m
 
 Instructions are in the scripts. Here are some examples:
 
-##moveNames.py
-```bash
+## moveNames.py
+```sh
 python moveNames.py fasta.fa _ "2_1"'
 ```
