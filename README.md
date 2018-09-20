@@ -13,9 +13,9 @@ python moveNames.py
 
 ### Examples
 ```bash
-$ python moveNames.py fasta.fa _ "2_1"
-$ python moveNames.py fasta.fastq _ "2_1" "@"
-$ python moveNames.py fasta2.fas - "New-2-gID_3-4"
+$ python moveNames.py fasta.fa _ "2_1" > newfasta.fa
+$ python moveNames.py fasta.fastq _ "2_1" "@" > newfastq.fastq
+$ python moveNames.py fasta2.fas - "New-2-gID_3-4" > newfasta2.fas
 ```
 ### Results
 ```
