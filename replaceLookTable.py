@@ -20,18 +20,18 @@ if len(sys.argv) >= 3:  #verify all mandatory arguments are in the line
                 for nsline, sline in enumerate(table, start=1): #move line by line
                     sline = sline.replace('\r', '') #avoid return problems
                     sline = sline.replace('\n', '') #avoid new line problems
-                    if len(sys.argv) >= 4:
-                        dictionary = sline.split(str(sys.argv[3]))
+                    if len(sys.argv) >= 4: #detect the custom separator argument
+                        dictionary = sline.split(str(sys.argv[3])) #use custom separator
                     else:
-                        dictionary = sline.split('\t')
-                    if len(sys.argv) >= 5:
+                        dictionary = sline.split('\t') #use tab by default
+                    if len(sys.argv) >= 5: #check if reverse mode is in arguments
                         if sys.argv[4] == "-r":
-                            newLine = newLine.replace(dictionary[0],dictionary[1])
+                            newLine = newLine.replace(dictionary[0],dictionary[1]) #use the first column as old string
                         else:
-                            newLine = newLine.replace(dictionary[1],dictionary[0])
+                            newLine = newLine.replace(dictionary[1],dictionary[0]) #in case that 4th arguments is not -r use default mode
                     else:
-                        newLine = newLine.replace(dictionary[1],dictionary[0])
-                print newLine
+                        newLine = newLine.replace(dictionary[1],dictionary[0]) #use the first column as new string
+                print newLine #print in console to operate with > to another file.
                    
                     
                     
