@@ -25,7 +25,34 @@ Original description line           New description line
 >SeqE-E1-kmr59944-Obs1     ----->  >New-E1-gID_3-Obs1
 ```
 
-## [ConvertFileUsingAlterAPI](https://github.com/camayal/Some-Scripts/blob/master/ConvertFileUsingAlterAPI.py)
+
+
+## [replaceLookTable.py](https://github.com/camayal/Some-Scripts/blob/master/replaceLookTable.py)
+Script that helps to replace easily strings in a file looking up a table of two columns (new string - old string)
+
+### Help
+```bash
+python replaceLookTable.py
+```
+
+### Examples
+```bash
+$ python replaceLookTable.py table.txt fasta.fa > resultfile.fa
+$ python replaceLookTable.py table.txt fasta.fa "," > resultfile.fa
+```
+The second line include custom separator "," by default the script look for a TAB
+
+table.txt example:
+```
+1    ABCD
+2    ATYL
+3    ATYL-E1
+4    ATYL-E2
+```
+
+
+
+## [ConvertFileUsingAlterAPI.py](https://github.com/camayal/Some-Scripts/blob/master/ConvertFileUsingAlterAPI.py)
 Script to convert all files in a folder using the API of the webservice of ALTER (Glez-Peña et al. 2010). It can be used in two ways: 1) Paste the file .py in the folder with files to convert and double click it by default it will convert Nexus files to Phylip for using in PhyML. 2) In terminal or cmd in Windows, you can call it using the command line options documented in --help command. If you use this, you must know that it is just a script to execute the ALTER API and you should cited it. Refer to the original ALTER website for more details about citation.
 
 ### Help
