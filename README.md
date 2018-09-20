@@ -7,7 +7,7 @@ Instructions are in the scripts. Here are some examples:
 ```bash
 $ python moveNames.py fasta.fa _ "2_1"
 $ python moveNames.py fasta.fastq _ "2_1" "@"
-$ python moveNames.py fasta.fastq - "New-2-gID_3-4"
+$ python moveNames.py fasta2.fas - "New-2-gID_3-4"
 ```
 Results
 ```
