@@ -10,40 +10,42 @@
 import sys
 
 if len(sys.argv) >= 4:  #verify all mandatory arguments are in the line           
-    with open("renamed_" + sys.argv[1], 'w') as outfile: #open or create new file for the result
-        with open(sys.argv[1], 'r') as f: #open the file (argv[1])
-            for nline, line in enumerate(f, start=1): #move line by line
-                line = line.replace('\r', '') #avoid return problems
-                line = line.replace('\n', '') #avoid new line problems
-                if len(sys.argv) == 5: #detect if a different identificator is indicated as optional
-                    identificator =  str(sys.argv[4])     #use the custom identificator
-                else:
-                    identificator = ">" #by default use fasta identificator
-                if line.find(identificator) == 0: #process line only if is a identificator                     
-                    print '\rLine: ', nline, #progress notification
-                    splitedName = line.split(sys.argv[2]) #split the original name
-                    splitedName[0] = splitedName[0].replace(identificator,'') #delete the identificator from the first element
-                    splitedPattern = sys.argv[3].split(sys.argv[2])  #split the pattern for the new name
-                    resultLine = "" #create empty var for the result
-                    for num, element in enumerate(splitedPattern, start=1): #organice the name using the pattern desired
-                        if num > 1: #define if nee or not a separator
-                            separatorForResult = str(sys.argv[2])
-                        else:
-                            separatorForResult = ''
-                        if element.isdigit(): #detect if is a number in the pattern
-                            intElement = int(element) - 1 #ajust the number entered with a 0 base array index
-                            if intElement >= len(splitedName): #detect if the element (pattern) is in the name
-                                IncludeSeparator = False #if is out the index ignore it and flag false the separator
-                            else: #if is in the index boundaries do the movement
-                                resultLine += separatorForResult + str(splitedName[intElement])
-                                IncludeSeparator = True #and activate the flag for include the separator
-                        else: #if is not a number, use the string
-                            resultLine += separatorForResult + str(splitedPattern[num - 1])
-                            IncludeSeparator = True
-                    outfile.write(identificator + resultLine + '\n')
-                else:
-                    outfile.write(line + '\n')   #write line in the result file if it does not have a indentificator
-            print '\rFinished: renamed_' + sys.argv[1] + ' was created'
+    #with open("renamed_" + sys.argv[1], 'w') as outfile: #open or create new file for the result
+    with open(sys.argv[1], 'r') as f: #open the file (argv[1])
+        for nline, line in enumerate(f, start=1): #move line by line
+            line = line.replace('\r', '') #avoid return problems
+            line = line.replace('\n', '') #avoid new line problems
+            if len(sys.argv) == 5: #detect if a different identificator is indicated as optional
+                identificator =  str(sys.argv[4])     #use the custom identificator
+            else:
+                identificator = ">" #by default use fasta identificator
+            if line.find(identificator) == 0: #process line only if is a identificator                     
+                #print '\rLine: ', nline, #progress notification
+                splitedName = line.split(sys.argv[2]) #split the original name
+                splitedName[0] = splitedName[0].replace(identificator,'') #delete the identificator from the first element
+                splitedPattern = sys.argv[3].split(sys.argv[2])  #split the pattern for the new name
+                resultLine = "" #create empty var for the result
+                for num, element in enumerate(splitedPattern, start=1): #organice the name using the pattern desired
+                    if num > 1: #define if nee or not a separator
+                        separatorForResult = str(sys.argv[2])
+                    else:
+                        separatorForResult = ''
+                    if element.isdigit(): #detect if is a number in the pattern
+                        intElement = int(element) - 1 #ajust the number entered with a 0 base array index
+                        if intElement >= len(splitedName): #detect if the element (pattern) is in the name
+                            IncludeSeparator = False #if is out the index ignore it and flag false the separator
+                        else: #if is in the index boundaries do the movement
+                            resultLine += separatorForResult + str(splitedName[intElement])
+                            IncludeSeparator = True #and activate the flag for include the separator
+                    else: #if is not a number, use the string
+                        resultLine += separatorForResult + str(splitedPattern[num - 1])
+                        IncludeSeparator = True
+                #outfile.write(identificator + resultLine + '\n')
+                print identificator + resultLine
+            else:
+                #outfile.write(line + '\n')   #write line in the result file if it does not have a indentificator
+                print line
+            #print '\rFinished: renamed_' + sys.argv[1] + ' was created'
                 
 
 else: #show a help if the script is not properlly called
