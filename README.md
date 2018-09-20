@@ -6,6 +6,11 @@ Instructions are in the scripts. Here are some examples:
 ## [moveNames.py](https://github.com/camayal/Some-Scripts/blob/master/moveNames.py)
 Script useful for moving parts of the name in files like fasta or fastq. It can rename an entire file from something like >ATG100X5_Sp1_Rand to >Sp1_ATG10X5_Rand using the pattern "2_1_3" moving the "elements" in the name knowing the separator.
 
+### Help
+```bash
+python moveNames.py
+```
+
 ### Examples
 ```bash
 $ python moveNames.py fasta.fa _ "2_1"
@@ -18,4 +23,12 @@ Original description line           New description line
 >SeqABC_ATG10455           ----->  >ATG10455_SeqABC
 @Seq1_gn33                 ----->  @gn33_Seq1
 >SeqE-E1-kmr59944-Obs1     ----->  >New-E1-gID_3-Obs1
+```
+
+## [ConvertFileUsingAlterAPI](https://github.com/camayal/Some-Scripts/blob/master/ConvertFileUsingAlterAPI.py)
+Script to convert all files in a folder using the API of the webservice of ALTER (Glez-Peña et al. 2010). It can be used in two ways: 1) Paste the file .py in the folder with files to convert and double click it by default it will convert Nexus files to Phylip for using in PhyML. 2) In terminal or cmd in Windows, you can call it using the command line options documented in --help command. If you use this, you must know that it is just a script to execute the ALTER API and you should cited it. Refer to the original ALTER website for more details about citation.
+
+### Help
+```bash
+python ConvertFileUsingAlterAPI.py --help
 ```
