@@ -11,7 +11,8 @@ $ python moveNames.py fasta.fastq - "New-2-gID_3-4"
 ```
 Results
 ```
->SeqABC_ATG10455        ----->  >ATG10455_SeqABC
-@Seq1_gn33              ----->  @gn33_Seq1
->SeqE-E1-kmr59944-Obs1  ----->  >New-E1-gID_3-Obs1
+Original description line           New description line
+>SeqABC_ATG10455           ----->  >ATG10455_SeqABC
+@Seq1_gn33                 ----->  @gn33_Seq1
+>SeqE-E1-kmr59944-Obs1     ----->  >New-E1-gID_3-Obs1
 ```
