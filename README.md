@@ -1,4 +1,9 @@
 # Some-Scripts
 Repository for different one-file scripts (Phylogenetics, Bioinformatics, Name managers, etc.)
 
-Instructions are in the scripts.
+Instructions are in the scripts. Here are some examples:
+
+- moveNames.py
+```shell
+python moveNames.py fasta.fa _ "2_1"'
+```
