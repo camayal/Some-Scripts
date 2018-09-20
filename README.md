@@ -47,9 +47,9 @@ table.txt example:
 1    ABCD
 2    ATYL
 3    ATYL-E1
-4    ATYL-E2
+4    ATYL-E2_
 ```
-
+Be careful with your replacements, in the table.txt example ATYL will replace all ATYL ocurrences, include ATYL-E1, include some unique characters to avoid it like _ as showed in ATYL-E2_
 
 
 ## [ConvertFileUsingAlterAPI.py](https://github.com/camayal/Some-Scripts/blob/master/ConvertFileUsingAlterAPI.py)
