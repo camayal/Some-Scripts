@@ -1,6 +1,7 @@
 # Some-Scripts
 Repository for different one-file scripts (Phylogenetics, Bioinformatics, Name managers, etc.)
-Check my gists for more useful codes at: [https://gist.github.com/camayal](https://gist.github.com/camayal)
+
+Also check my gists for more useful one-line codes at: [https://gist.github.com/camayal](https://gist.github.com/camayal)
 
 Instructions are in the scripts. Here are some examples:
 
