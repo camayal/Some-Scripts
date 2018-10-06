@@ -1,0 +1,1 @@
+awk 'BEGIN {OFS = "\n" ; max = 0 ; min = 100000000} {header = $0 ; getline seq ; getline qheader ;  getline qseq ;  if (length(seq) > max) { max = length(seq)}; if (length(seq) < min) { min = length(seq)}; len[length(seq)]++;} END {print "max:" max " min:" min; for (var in len){print "lenght:" var " times:" len[var]}}' < E0_Tepeco1.fq
