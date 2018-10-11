@@ -54,7 +54,7 @@ table.txt example:
 Be careful with your replacements, in the table.txt example ATYL will replace all ATYL ocurrences, include ATYL-E1, include some unique characters to avoid it like _ as showed in ATYL-E2_
 
 
-## [ConvertFileUsingAlterAPI.py](https://github.com/camayal/Some-Scripts/blob/master/ConvertFileUsingAlterAPI.py)
+## [ConvertFileUsingAlterAPI.py](https://raw.githubusercontent.com/camayal/Some-Scripts/master/ConvertFileUsingAlterAPI.py)
 Script to convert all files in a folder using the API of the webservice of ALTER (Glez-Peña et al. 2010). It can be used in two ways: 1) Paste the file .py in the folder with files to convert and double click it by default it will convert Nexus files to Phylip for using in PhyML. 2) In terminal or cmd in Windows, you can call it using the command line options documented in --help command. If you use this, you must know that it is just a script to execute the ALTER API and you should cited it. Refer to the original ALTER website for more details about citation.
 
 ### Help
