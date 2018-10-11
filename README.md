@@ -5,7 +5,7 @@ Also check my gists for more useful one-line codes at: [https://gist.github.com/
 
 Instructions are in the scripts. Here are some examples:
 
-## [moveNames.py](https://github.com/camayal/Some-Scripts/blob/master/moveNames.py)
+## [moveNames.py](https://raw.githubusercontent.com/camayal/Some-Scripts/master/moveNames.py)
 Script useful for moving parts of the name in files like fasta or fastq. It can rename an entire file from something like >ATG100X5_Sp1_Rand to >Sp1_ATG10X5_Rand using the pattern "2_1_3" moving the "elements" in the name knowing the separator.
 
 ### Help
@@ -29,7 +29,7 @@ Original description line           New description line
 
 
 
-## [replaceLookTable.py](https://github.com/camayal/Some-Scripts/blob/master/replaceLookTable.py)
+## [replaceLookTable.py](https://raw.githubusercontent.com/camayal/Some-Scripts/master/replaceLookTable.py)
 Script that helps to replace easily strings in a file looking up a table of two columns (new string - old string)
 
 ### Help
