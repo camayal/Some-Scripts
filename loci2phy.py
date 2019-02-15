@@ -26,9 +26,6 @@ if len(sys.argv) >= 2:  #verify all mandatory arguments are in the line
             if separator in line: #detect separator
                 f = open(str(sys.argv[1].split('.')[0]) + '_locus_' + str(nSubfile) + '.phy', 'w') #each time reach a separator, save the previous seqs
                 f.write(str(numSeq) + ' ' + str(seqLenght) + '\n' + resultLocus) 
-                
-                
-
                 f.close()
                 resultLocus = '' #reset the big variable
                 seqLenght = 0
