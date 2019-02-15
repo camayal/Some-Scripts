@@ -2,7 +2,7 @@
 #
 #loci2phy
 #
-#Author: Carlos Alonso Maya Lastra - 2018
+#Author: Carlos Alonso Maya Lastra - 2019
 #Description: Script to extract each locus from the *.loci from iPyrad
 
 import sys
